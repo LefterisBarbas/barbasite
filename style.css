@@ -4,6 +4,8 @@
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
+  margin-top: 20px;
+  padding: 0 20px;
 }
 body {
   background: linear-gradient(135deg, #f5e9da 0%, #d2b48c 100%);
@@ -270,6 +272,7 @@ body {
   padding: 6px 14px 6px 14px;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(161,51,4,0.10);
+  transition: opacity 0.3s ease;
 }
 
 @media (max-width: 900px) {
@@ -294,9 +297,21 @@ body {
   .sidebar-toggle {
     display: block;
   }
+   .sidebar-toggle.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
   body {
     margin-left: 0;
   }
+  .title {
+    margin-top: 80px;
+    padding: 0 60px 0 60px;
+  }
+  .lang-switcher {
+    top: 18px;
+    right: 18px;
+  }  
 }
 
 
