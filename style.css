@@ -231,6 +231,136 @@ body {
   }
 }
 
+/* Blog Post Page Styles */
+.blog-post-container {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+/* Override body margin for blog post pages */
+body.blog-post-page {
+  margin-left: 0;
+}
+
+.blog-post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(210, 180, 140, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  padding: 12px 16px;
+  margin-bottom: 24px;
+}
+
+.blog-post-date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #a13304;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  gap: 4px;
+}
+
+.blog-post-language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #8B4513;
+  color: white;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  min-width: 32px;
+  text-align: center;
+}
+
+.blog-post-content {
+  background: rgba(210, 180, 140, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  padding: 32px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.blog-post-content h2 {
+  color: #a13304;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 32px 0 16px 0;
+  border-bottom: 2px solid #a13304;
+  padding-bottom: 8px;
+}
+
+.blog-post-content p {
+  color: #8B4513;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.blog-post-content ul {
+  color: #8B4513;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.blog-post-content li {
+  margin-bottom: 8px;
+}
+
+.blog-post-footer {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.back-to-blog {
+  display: inline-block;
+  background: #a13304;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.back-to-blog:hover {
+  background: #d2691e;
+}
+
+/* Responsive design for blog post */
+@media (max-width: 600px) {
+  .blog-post-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .blog-post-content {
+    padding: 20px;
+  }
+  
+  .blog-post-content h2 {
+    font-size: 1.2rem;
+  }
+}
+
+
 @media (max-width: 800px) {
   .about {
     max-width: 98vw;
