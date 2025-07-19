@@ -112,6 +112,10 @@ body {
     max-width: 95vw;
     padding: 16px 4vw 16px 4vw;
   }
+   .contact-info {
+    max-width: 95vw;
+    padding: 16px 4vw 16px 4vw;
+  }
 }
 
 .uc-text {
