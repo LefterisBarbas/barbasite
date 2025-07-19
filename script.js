@@ -5,7 +5,8 @@ const sidebarToggle = document.getElementById('sidebar-toggle');
 sidebarToggle.addEventListener('click', function(event) {
   event.stopPropagation();
   sidebar.classList.toggle('open');
-});
+  
+  // Hide/show menu button based on sidebar state
   if (window.innerWidth <= 700) {
     if (sidebar.classList.contains('open')) {
       sidebarToggle.classList.add('hidden');
@@ -19,6 +20,7 @@ document.addEventListener('click', function(event) {
   if (window.innerWidth <= 700 && sidebar.classList.contains('open')) {
     if (!sidebar.contains(event.target) && event.target !== sidebarToggle) {
       sidebar.classList.remove('open');
+      sidebarToggle.classList.remove('hidden');
     }
   }
 });
