@@ -6,6 +6,14 @@ sidebarToggle.addEventListener('click', function(event) {
   event.stopPropagation();
   sidebar.classList.toggle('open');
 });
+  if (window.innerWidth <= 700) {
+    if (sidebar.classList.contains('open')) {
+      sidebarToggle.classList.add('hidden');
+    } else {
+      sidebarToggle.classList.remove('hidden');
+    }
+  }
+});
 
 document.addEventListener('click', function(event) {
   if (window.innerWidth <= 700 && sidebar.classList.contains('open')) {
@@ -116,3 +124,12 @@ document.addEventListener('click', function(event) {
 
 // Initialize flags and language on page load
 updateFlags();
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 700) {
+    sidebarToggle.classList.remove('hidden');
+  } else if (sidebar.classList.contains('open')) {
+    sidebarToggle.classList.add('hidden');
+  } else {
+    sidebarToggle.classList.remove('hidden');
+  }
+});
